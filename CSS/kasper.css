@@ -77,7 +77,7 @@ h3 , p , h2 ,h4,h1, ul ,li{
 .main-heading p{
     margin: 0px auto 60px;
     padding: 20px;
-    width: 550px;
+    max-width: 550px;
     line-height: 2;
 }
 /*End Components*/
@@ -410,6 +410,7 @@ header nav ul li:hover a::after{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
     margin: 60px 0px;
+    overflow: hidden;
    
 }
 .portfolio .imgs-container .box{
@@ -500,6 +501,22 @@ header nav ul li:hover a::after{
     border: none;
 
 }
+@media (max-width: 767px){
+    .video .text{
+        padding: 20px 0px;
+    }
+    .video .text h2{
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    .video .text p{
+        margin-bottom: 15px;
+    }
+    .video .text button{
+    padding: 8px 16px;
+    font-weight: 200;
+    }
+}
 /*end video*/
 /*start about*/
 .about{
@@ -514,7 +531,7 @@ header nav ul li:hover a::after{
     max-width: 100%;
 }
 @media (max-width: 767px){
-    .about img{
+    .about .container img{
         bottom: -60px;
         margin-top: -60px;
     }
@@ -811,6 +828,7 @@ header nav ul li:hover a::after{
     margin-bottom: 30px;
     position: relative;
 }
+/*
 .pricing .container .plans .plan ul li::after{
     content: "";
     width: 50%;
@@ -820,6 +838,7 @@ header nav ul li:hover a::after{
     transform: translateX(-50%);
     bottom: -12px;
 }
+*/
 .pricing .container .plans .plan .foot{
     padding: 40px 0px;
 }
@@ -885,10 +904,11 @@ header nav ul li:hover a::after{
     color: white;
     width: 500px;
     max-width: 100%;
-    padding: 0px 0px 0px 20px;
+    padding: 20px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
+    position: relative;
 }
 .subscribe .container form i{
     font-size: 25px;
@@ -900,7 +920,7 @@ header nav ul li:hover a::after{
     font-size: 20px;
     font-weight: 400;
     padding: 0px;
-    margin: 0px;
+    margin: 0px 0px 0px 20px;
 }
 .subscribe .container form input:focus{
     outline: none;
@@ -908,6 +928,8 @@ header nav ul li:hover a::after{
 .subscribe .container form input:last-child{
     background: var(--maincolor);
     padding: 20px;
+    position: absolute;
+    right: 0px;
 }
 .subscribe form ::placeholder{
     color: white;
